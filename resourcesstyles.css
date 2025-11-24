@@ -6,3 +6,47 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#EFEFFF, #CCCBFF)
+}
+.wrapper .card{
+    width: 350px;
+    height: auto;
+    background: #fff;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+    display: flex;
+}
+.card .card-image {
+    position: relative;
+}
+.card .card-image img{
+    width: 100%;
+    padding: 10px;
+    border-radius: 22px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.card .card-image .card-tag{
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 15px; 
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.card .card-profile img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
