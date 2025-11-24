@@ -22,6 +22,10 @@ body{
     border-radius: 20px;
     box-shadow: 0 10px 10px rgba(0,0,0,0.05);
     display: flex;
+    transition: transform 0.3s ease;
+}
+.wrapper .card:hover{
+    transform: translateY(-10px);
 }
 .card .card-image {
     position: relative;
@@ -38,15 +42,83 @@ body{
     position: absolute;
     left: 25px;
     top: 25px;
+    color: #6366f1;
     border-radius: 30px;
     font-size: 0.75rem;
     font-weight: 600;
     padding: 5px 15px; 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     background: rgba(255, 255, 255, 0.9);
 }
+.card .card-content{
+   display: flex;
+   flex: 1;
+   flex-direction: column;
+   padding: 10px 25px 25px;
+}
+.card .card-content .card-title{
+    color: #111111;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+.card .card-content .card-text{
+    color: #747474;
+    font-size: .95rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.card .card-content .card-footer{
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: auto;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
 
+.card .card-footer .card-profile{
+    display: flex;
+    align-items: center;
+}
 .card .card-profile img{
     width: 35px;
     height: 35px;
     border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.card .card-profile .card-profile-info{
+    display: flex;
+    flex-direction: column;
+}
+.card .card-profile .card-profile-name{
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #202020;
+}
+.card .card-profile .card-profile-role{
+    font-size: 0.8rem;
+    color: #7a7a7a;
+}
+.card .card-footer .card-button{
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.81rem;
+    font-weight: 600;
+    text-decoration: none;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    box-shadow: 0 8px 15px rgba(99,102,241, 0.2);
+    transition: all 0.3s ease;
+
+}
+.card .card-footer .card-button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(99,102,241, 0.3);
 }
