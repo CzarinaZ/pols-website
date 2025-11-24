@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Monsterat", sans-serif;
+}
+
+/* Navigation Bar styling */
+nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 2;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+
+}
+nav a:hover{
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Header Section */
+.container{
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+}
+
+.container img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   filter: grayscale(90%);
+}
+
+.container .overlay{
+   position:absolute;
+   top:0;
+   left:0;
+   width: 100%;
+   height:100%;
+   background-color: rgba(0,0,0,0.5);
+}
+
+.container-content{
+   position: absolute;
+   top:45%;
+   left:50%;
+   transform: translate(-50%, -50%);
+   color: white;
+   z-index:1;
+   text-align: center;
+}
+
+.container-content h1{
+   font-size:6rem;
+   left:45%;
+   margin-bottom:10px;
+   line-height: 1.2;
+   max-width: 800px;
+   white-space: nowrap;
+   color:white;
+}
+.container-content p{
+   font-size: 1.3rem;
+   margin-bottom: 20px;
+   white-space: nowrap;
+   letter-spacing: 1.05;
+}
+   /*Call to Action Button*/
+.btn{
+   background-color: #610000;
+   color:white;
+   padding:10px 20px;
+   border:none;
+   border-radius: 5px;
+   font-size: 16px;
+   margin-top: 30px;
+   
+}
+.btn:hover{
+   transform: scale(1.1);
+   color: white;
+}
+
+
+
+
+
+/*About Us Section (Main)*/
+.content-wrapper{
+    display:flex;
+    gap:40px;
+    max-width:1200px;
+    margin:0 auto;
+    padding: 50px 20px;
+    align-items: flex-start;
+}
+
+/* Left: About Section */
+.about-section{
+    flex: 1;
+    padding: 20px;
+    background:#fafafa;
+    border-radius:10px;
+    border: 1px solid #e2e2e2;
+}
+.about-section h2{
+    margin-top: 0;
+    font-size: 26px;
+}
+.about-section p{
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Right: Overview section*/
+.overview-section{
+    flex: 1;
+}
+.overview-title{
+    font-size: 26px;
+    margin-bottom: 18px;
+    font-weight: 600;
+    text-align: left;
+    text-align:center;
+}
+
+/* Overview Boxes 2x2 grid*/
+.overview-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:16px;
+}
+.overview-box{
+    padding:30px 50px;
+    background:#eaeaea;
+    transform: translateY(-3px);
+}
+.overview-box-title{
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 8px;
+}
+.overview-box:hover{
+    background:#d4d4d4;
+    cursor: pointer;
+    transform: translateY(-6px);
+    transition: transform 0.2s, background-color 0.2s;
+}
+/* Responsive design for About Section */
+@media (max-width: 900px) {
+      .content-wrapper {
+        flex-direction: column;
+      }
+    }
+
+/* Footer Section */
+footer{
+    background: #f8f8f8;
+    color:#222;
+    border-top: 1px solid #e6e6e6;
+    padding: 18px 20px;
+    font-size: 14px;
+}
+.footer-inner{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.footer-text p{
+    margin: 2px 0;
+    line-height: 1.25;
+}
+.footer-text .byline strong{
+    font-weight: 600;
+}
+.footer-utility{
+    max-width: 1100px;
+    margin: 10px auto 0;
+    text-align: right;
+}
+.back-to-top{
+    color: #0b5fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.back-to-top:hover, .back-to-top:focus{
+    text-decoration: underline;
+}
+/* Responsive design for the footer*/
+@media (max-width: 520px) {
+      .footer-inner {
+        flex-direction: row;
+        gap: 12px;
+      }
+      .footer-utility {
+        text-align: center;
+        margin-top: 12px;
+      }
+    }

@@ -1,0 +1,100 @@
+/*Header Section*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Monsterat", sans-serif;
+}
+
+.site-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 0 200px;
+    background:white;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+/*left side of header*/
+.header-left{
+    display:flex;
+    align-items: center;
+    gap: 14px;
+}
+.header-title{
+    margin: 0;
+    padding-left: 12px;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #000;
+    border-left: 4px solid #610000;
+}
+.header-logo{
+    height: auto;
+    width: 48px;
+}
+
+/*right side of header*/
+.header-nav a{
+    margin-left: 25px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 10px;
+
+}
+
+.header-nav a:hover{
+    background-color: #555;
+    border-radius: 5px;
+    color:white;
+}
+
+
+/* Footer Section */
+footer{
+    background: #f8f8f8;
+    color:#222;
+    border-top: 1px solid #e6e6e6;
+    padding: 18px 20px;
+    font-size: 14px;
+}
+.footer-inner{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.footer-text p{
+    margin: 2px 0;
+    line-height: 1.25;
+}
+.footer-text .byline strong{
+    font-weight: 600;
+}
+.footer-utility{
+    max-width: 1100px;
+    margin: 10px auto 0;
+    text-align: right;
+}
+.back-to-top{
+    color: #0b5fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.back-to-top:hover, .back-to-top:focus{
+    text-decoration: underline;
+}
+/* Responsive design for the footer*/
+@media (max-width: 520px) {
+      .footer-inner {
+        flex-direction: row;
+        gap: 12px;
+      }
+      .footer-utility {
+        text-align: center;
+        margin-top: 12px;
+      }
+    }

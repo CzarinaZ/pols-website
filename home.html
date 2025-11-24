@@ -6,7 +6,7 @@
         <title>Home Page</title>
 
         <!--link the webpage's stylesheet-->
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="homestyles.css">
 
         <!--link to an external JavaScript file-->
         <script src="script.js" defer></script>
@@ -28,12 +28,73 @@
             <div class="container">
                 <div class="overlay"></div>
                 <div class="container-content">
-                    <h1>Title</h1>
-                    <p>Subtitle</p>
-                    <button>Learn More</button>
+                    <h1>Finding Political Voice</h1>
+                    <p>Filipino Immigrant Engagement in the U.S.</p>
+                    <a href="barriers.html"><button class="btn">Learn More</button></a>
                 </div>
-                <img>
+                <img src="assets/filrallies.jpg" alt="Filipinos rallying in the US">
             </div>
         </header>
+        
+        <main>
+            <!--About the Project Section-->
+            <div class="content-wrapper">
+                <!--LEFT: About section-->
+                <div class="about-section">
+                    <h2>About the Project</h2>
+                    <!--Research Question-->
+                    <h4>Research Question:</h4>
+                    <p>"What helps Filipino immigrants overcome cultural and structural barriers to engage confidently in American politics."</p>
+                    <!--Why it matters?-->
+                    <h4>Why it Matters:</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. 
+                    Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia 
+                    nostra inceptos himenaeos.</p>
+                </div>
+
+                
+                <!--RIGHT: Quick Overview Boxes-->
+                <div class="overview-section">
+                    <h2 class="overview-title">Explore the Project</h2>
+
+                    <div class="overview-container">
+                        <!--heads to cultural norms loc-->
+                        <div class="overview-box" onclick="location.href='barriers.html'">
+                            <div class="icon-placeholder"></div>
+                            <div class="overview-box-title">Cultural Norms</div>
+                        </div>
+                        <!--heads to barriers loc-->
+                        <div class="overview-box" onclick="location.href='barriers.html'">
+                            <div class="icon-placeholder"></div>
+                            <div class="overview-box-title"> Structural & Systemic Barriers</div>
+                        </div>
+                        <!--heads to Interviews loc-->
+                        <div class="overview-box" onclick="location.href='interviews.html'">
+                            <div class="icon-placeholder"></div>
+                            <div class="overview-box-title">Interviews</div>
+                        </div>
+                        <!--heads to resources-->
+                        <div class="overview-box" onclick="location.href='resources.html'">
+                            <div class="icon-placeholder"></div>
+                            <div class="overview-box-title">Reflections & Resources</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="footer-inner">
+                    <div class="footer-text">
+                        <p class="copyright">© 2025 Finding Political Voice Project</p>
+                        <p class="byline">Created by <strong>Czarina Bareng</strong> | Filipino Immigrant Political Engagement Study</p>
+                        <p class="course">For <em>POLS&202: American Government</em>, <em>Professor Olivia Atkinson</em></p>
+                    </div>
+                </div>
+
+                <div class="footer-utility">
+                    <a href="#top" class="back-to-top">Back to top</a>
+                </div>
+            </footer>
+        </main>
     </body>
 </html>
