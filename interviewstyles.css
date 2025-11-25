@@ -6,6 +6,72 @@
     box-sizing:border-box;
     font-family:"inter", sans-serif;
 }
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: transparent;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 1600px;
+}
+.navbar-logo{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #555;
+    text-decoration: none;
+    cursor: pointer;
+}
+.navbar-container .navbar-menu{
+    display: flex;
+    text-align: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.navbar-conainter .navbar-menu li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 3px 20px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: all 0.7s ease;
+    white-space: nowrap;
+}
+
+.navbar-container .navbar-menu li a:hover{
+    color: #162530;
+    background: rgba(188,212,229,0,2);
+    border: 2px solid #fff;
+}
+.navbar-toggle{
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 3px;
+    margin: 5px auto;
+    background #fff;
+    transition: all 0.3s ease to use;
+}
 .quotessection{
     display:grid;
     height: 100%;
@@ -64,3 +130,50 @@
     transform: translateY(-3px);
     transition: all 0.3s ease;
 }
+
+/* Footer Section */
+footer{
+    background: #f8f8f8;
+    color:#222;
+    border-top: 1px solid #e6e6e6;
+    padding: 18px 20px;
+    font-size: 14px;
+}
+.footer-inner{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.footer-text p{
+    margin: 2px 0;
+    line-height: 1.25;
+}
+.footer-text .byline strong{
+    font-weight: 600;
+}
+.footer-utility{
+    max-width: 1100px;
+    margin: 10px auto 0;
+    text-align: right;
+}
+.back-to-top{
+    color: #0b5fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.back-to-top:hover, .back-to-top:focus{
+    text-decoration: underline;
+}
+/* Responsive design for the footer*/
+@media (max-width: 520px) {
+      .footer-inner {
+        flex-direction: row;
+        gap: 12px;
+      }
+      .footer-utility {
+        text-align: center;
+        margin-top: 12px;
+      }
+    }
