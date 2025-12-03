@@ -6,12 +6,21 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
+.reflection{
+    padding: 50px 200px;
+    display: flex;
+}
+
+
+
+
+
 .resourcessection{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 110vh;
     background: linear-gradient(#8eb9e3, #ff978f)
 }
 .resources-title h1{
