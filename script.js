@@ -36,3 +36,6 @@ const swiper = new Swiper('.wrapper', {
     }
 });
 
+function flipCard(card) {
+            card.classList.toggle('flipped');
+        }

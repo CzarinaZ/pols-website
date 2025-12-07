@@ -10,26 +10,71 @@
 /*Introduction text*/
 .introtext{
     text-align: center;
-    padding: 150px 150px;
+    padding: 100px 150px;
     margin: 10px 250px;
 }
 
 .introtext h1{
     padding-bottom: 50px;
     font-size: 3rem;
+    color:rgb(41, 21, 13);
 }
 .introtext p{
     font-size: 16px;
+    background: #f0f0f0;
+    padding: 50px;
+    border-radius: 18px;
 }
 
+/*arrow*/
+.arrow{
+    position: absolute;
+    top:60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.arrow span{
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-bottom: 2px solid #301802;
+    border-right: 2px solid #301802;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: scroll 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -.4s;
+}
+@keyframes scroll{
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-15px,-15px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(15px,15px);
+    }
+}
+.shared-background{
+    background-image: url("assets/background2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
 
 /*cultural section*/
 .cultural-section{
     justify-content: center;
     align-items: center;
     min-height: 80vh;
-    background-image: url("assets/background2.png");
-    background-size: cover;
 }
 .culturalsectiontitle{
     text-align: center;
@@ -115,3 +160,113 @@
 
 
 /*structural barriers*/
+.structural-section{
+    min-height: 80vh;
+    padding: 0px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.structuraltext{
+    text-align: center;
+    margin-bottom: 60px;
+    color: #333;
+}
+.structuralsectiontitle{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.structuraltext p{
+    font-size: 16px;
+    opacity: .95;
+    max-width: 700px;
+    margin: auto;
+}
+.structural-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(2,1fr);
+    gap: 30px;
+    max-width: 1000px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+.structural-card{
+    height: 250px;
+    perspective: 1000px;
+    cursor:pointer;
+}
+.card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition:  transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.structural-card.flipped .card-inner{
+    transform: rotateY(180deg);
+}
+.card-front, .card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px;
+}
+
+.card-front{
+    background: rgba(241, 234, 226, 0.842);
+    border: 1.5px solid #301802;
+}
+
+.card-back{
+    background: rgb(41, 21, 13);
+    color: rgba(233, 220, 207, 0.842);
+    transform: rotateY(180deg);
+}
+.structural-content{
+    width: 100%;
+}
+.structural-content p{
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+}
+.card-back .structural-content p{
+    color: white;
+    font-weight: 500;
+}
+.card-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: rgb(41, 21, 13);
+}
+
+.structural-card:hover .card-inner{
+    transform: scale(1.05);
+}
+
+.structural-card.flipped:hover .card-inner{
+    transform: rotateY(180deg) scale(1.05);
+}
+.click-hint{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
