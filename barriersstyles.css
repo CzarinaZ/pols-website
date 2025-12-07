@@ -7,22 +7,55 @@
     font-family: 'Inter', sans-serif;
 }
 
+/*Introduction text*/
+.introtext{
+    text-align: center;
+    padding: 150px 150px;
+    margin: 10px 250px;
+}
+
+.introtext h1{
+    padding-bottom: 50px;
+    font-size: 3rem;
+}
+.introtext p{
+    font-size: 16px;
+
+}
+
+
+
+
+
+
+
+
+
+
+/*cultural section*/
 .cultural-section{
-    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
-    background: linear-gradient(#8eb9e3, #ff978f);
+    background: #f0f0f0;
 }
-
+.culturalsectiontitle{
+    text-align: center;
+    padding: 80px 0 0 0;
+    font-size: 2.5rem;
+    color: #333;
+}
+.culturaltext{
+    text-align: center;
+}
 .cultural-container{
     position:relative;
     display: flex;
     justify-self: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 100px 50px;
-    padding: 100px 50px;
+    gap: 80px 50px;
+    padding: 80px 50px;
 }
 
 .cultural-container .cultural-card{
@@ -49,6 +82,7 @@
     top: 20px;
     background: #333;
     border-radius: 12px;
+    overflow: hidden;
     transition: 0.5s;
 }
 
@@ -65,4 +99,24 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.cultural-container .cultural-card .cultural-content{
+    position: absolute;
+    top: 252px;
+    height: 0px;
+    width: 100%;
+    padding: 0 30px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.cultural-container .cultural-card:hover .cultural-content{
+    height: 180px;
+    top: 150px;
+}
+
+.cultural-container .cultural-card .cultural-content p{
+    color: #333;
 }
