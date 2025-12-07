@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.cultural-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: linear-gradient(#8eb9e3, #ff978f);
+}
+
+.cultural-container{
+    position:relative;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.cultural-container .cultural-card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+
+.cultural-container .cultural-card:hover{
+    height: 400px;
+}
+
+.cultural-container .cultural-card .imgBx{
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 20px;
+    background: #333;
+    border-radius: 12px;
+    transition: 0.5s;
+}
+
+.cultural-container .cultural-card:hover .imgBx{
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.2); 
+}
+
+.cultural-container .cultural-card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

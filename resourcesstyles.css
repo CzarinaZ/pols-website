@@ -21,7 +21,7 @@
     align-items: center;
     justify-content: center;
     min-height: 110vh;
-    background: linear-gradient(#8eb9e3, #ff978f)
+    background: linear-gradient(#8eb9e3, #ff978f);
 }
 .resources-title h1{
     text-align: center;
