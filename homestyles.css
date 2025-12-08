@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    font-family: "Monsterat", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 /* Navigation Bar styling */
@@ -93,11 +95,15 @@ nav a:hover{
    color: white;
 }
 
+.about-section{
+    flex: 1;
+    padding: 20px;
+    background:#fafafa;
+    border-radius:10px;
+    border: 1px solid #e2e2e2;
+}
 
-
-
-
-/*About Us Section (Main)*/
+/*About section */
 .content-wrapper{
     display:flex;
     gap:40px;
@@ -106,28 +112,10 @@ nav a:hover{
     padding: 50px 20px;
     align-items: flex-start;
 }
-
-/* Left: About Section */
-.about-section{
-    flex: 1;
-    padding: 20px;
-    background:#fafafa;
-    border-radius:10px;
-    border: 1px solid #e2e2e2;
-}
-.about-section h2{
-    margin-top: 0;
-    font-size: 26px;
-}
-.about-section p{
-    line-height: 1.6;
-    font-size: 16px;
-}
-
-/* Right: Overview section*/
 .overview-section{
     flex: 1;
 }
+
 .overview-title{
     font-size: 26px;
     margin-bottom: 18px;
@@ -136,7 +124,6 @@ nav a:hover{
     text-align:center;
 }
 
-/* Overview Boxes 2x2 grid*/
 .overview-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -150,8 +137,6 @@ nav a:hover{
 .overview-box-title{
     font-size: 17px;
     font-weight: 600;
-    text-align: center;
-    margin-top: 8px;
 }
 .overview-box:hover{
     background:#d4d4d4;
@@ -159,12 +144,8 @@ nav a:hover{
     transform: translateY(-6px);
     transition: transform 0.2s, background-color 0.2s;
 }
-/* Responsive design for About Section */
-@media (max-width: 900px) {
-      .content-wrapper {
-        flex-direction: column;
-      }
-    }
+
+/*Short Personal Story */
 
 /* Footer Section */
 footer{
@@ -211,4 +192,15 @@ footer{
         text-align: center;
         margin-top: 12px;
       }
+    }
+
+.scroll-indicator{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    z-index: 1000;
+    transition: width 0.3s ease;
     }

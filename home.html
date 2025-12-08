@@ -37,51 +37,73 @@
         </header>
         
         <main>
-            <!--About the Project Section-->
-            <div class="content-wrapper">
-                <!--LEFT: About section-->
-                <div class="about-section">
-                    <h2>About the Project</h2><br>
-                    <!--Research Question-->
-                    <h4>Research Question:</h4>
-                    <p>"What helps Filipino immigrants overcome cultural and structural barriers to engage confidently in American politics."</p><br>
-                    <!--Why it matters?-->
-                    <h4>Why it Matters:</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. 
-                    Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia 
-                    nostra inceptos himenaeos.</p>
+                <div class="scroll-indicator" id="scrollIndicator"></div>
+                <!--left side-->
+                <div class="content-wrapper">
+                    <div class="about-section">
+                        <div class="about-container">
+                            <!--Research Question-->
+                                <div class="researchqsection">
+                                    <h2>Research Question</h2>
+                                    <p>What helps Filipino immigrants and second generation Filipino Americans living in culturally rooted Filipino households overcome cultural and structural barriers to engage confidently in American politics?</p>
+                                </div>
+                                <!--Why it matters?-->
+                                <div class="matters">
+                                    <div class="wrapper">
+                                        <div class="typing">
+                                            <h2>Why Does This Matter?</h2>
+                                        </div>
+                                    </div>
+                                    <div class="matters-content">
+                                        <p> 
+                                            This topic is important because Filipino Americans are one of the largest Asian American communities in the United  States, yet they continue to be underrepresented in political participation and leadership. Many Filipino immigrants and their families face challenges such as language barriers, unfamiliar political systems, long work hours, and fear of making mistakes. 
+                                            Cultural values can also influence how comfortable individuals feel speaking up or getting involved. When communities are disengaged from politics, their needs and concerns may not be fully addressed. By understanding what helps Filipino and Filipino American communities overcome these barriers, this research promotes inclusion, stronger representation, and a more equitable democracy.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    <!--RIGHT: Quick Overview Boxes-->
+                    <div class="overview-section">
+                        <h2 class="overview-title">Explore the Project</h2>
+
+                        <div class="overview-container">
+                            <!--heads to cultural norms loc-->
+                            <div class="overview-box" onclick="location.href='barriers.html'">
+                                <div class="icon-placeholder"></div>
+                                <div class="overview-box-title">Cultural Norms</div>
+                            </div>
+                            <!--heads to barriers loc-->
+                            <div class="overview-box" onclick="location.href='barriers.html'">
+                                <div class="icon-placeholder"></div>
+                                <div class="overview-box-title"> Structural & Cultural Barriers</div>
+                            </div>
+                            <!--heads to Interviews loc-->
+                            <div class="overview-box" onclick="location.href='interviews.html'">
+                                <div class="icon-placeholder"></div>
+                                <div class="overview-box-title">Interviews</div>
+                            </div>
+                            <!--heads to resources-->
+                            <div class="overview-box" onclick="location.href='resources.html'">
+                                <div class="icon-placeholder"></div>
+                                <div class="overview-box-title">Reflections & Resources</div>
+                            </div>
+                        </div>   
+                    </div>
                 </div>
 
                 
-                <!--RIGHT: Quick Overview Boxes-->
-                <div class="overview-section">
-                    <h2 class="overview-title">Explore the Project</h2>
-
-                    <div class="overview-container">
-                        <!--heads to cultural norms loc-->
-                        <div class="overview-box" onclick="location.href='barriers.html'">
-                            <div class="icon-placeholder"></div>
-                            <div class="overview-box-title">Cultural Norms</div>
-                        </div>
-                        <!--heads to barriers loc-->
-                        <div class="overview-box" onclick="location.href='barriers.html'">
-                            <div class="icon-placeholder"></div>
-                            <div class="overview-box-title"> Structural & Cultural Barriers</div>
-                        </div>
-                        <!--heads to Interviews loc-->
-                        <div class="overview-box" onclick="location.href='interviews.html'">
-                            <div class="icon-placeholder"></div>
-                            <div class="overview-box-title">Interviews</div>
-                        </div>
-                        <!--heads to resources-->
-                        <div class="overview-box" onclick="location.href='resources.html'">
-                            <div class="icon-placeholder"></div>
-                            <div class="overview-box-title">Reflections & Resources</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+                <script>
+                            window.addEventListener('scroll', () => {
+                            const scrollTop = document.documentElement.scrollTop;
+                            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                            const scrollPercent = (scrollTop / scrollHeight) * 100;
+                            document.getElementById('scrollIndicator').style.width = scrollPercent + '%';
+                        });
+                </script>
+            
+            <!--Footer-->
             <footer>
                 <div class="footer-inner">
                     <div class="footer-text">
