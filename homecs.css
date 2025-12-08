@@ -1,95 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-*{
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
-    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
 }
 
-/* Navigation Bar styling */
-nav{
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 30px 125px;
-    z-index: 2;
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
 }
-nav ul{
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-}
-nav a{
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px 10px;
-    font-size: 16px;
-    margin-left: 5px;
 
-}
-nav a:hover{
-    background-color: #555;
-    border-radius: 5px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Header Section */
-.container{
-   position: relative;
-   width: 100%;
-   height: 100vh;
-   overflow: hidden;
+header {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
-.container img{
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   filter: grayscale(20%);
+header .container {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    height: 100%;
 }
 
-.container .overlay{
-   position:absolute;
-   top:0;
-   left:0;
-   width: 100%;
-   height:100%;
-   background-color: rgba(0,0,0,0.5);
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(30, 60, 114, 0.8);
+    z-index: 1;
 }
 
-.container-content{
-   position: absolute;
-   top:45%;
-   left:50%;
-   transform: translate(-50%, -50%);
-   color: rgb(255, 255, 255);
-   z-index:1;
-   text-align: center;
-   text-shadow: 5px 5px 4px rgba(0,0,0,0.2);
+.container-content {
+    z-index: 2;
+    color: white;
+    animation: fadeInUp 1s ease-out;
 }
 
-.container-content h1{
-   font-size:6rem;
-   margin-bottom:10px;
-   line-height: 1.2;
-   white-space: nowrap;
-   color:#ffffff;
+.container-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    background: linear-gradient(45deg, #fff, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.container-content p{
-   font-size: 28px;
-   margin-bottom: 20px;
-   white-space: nowrap;
-   letter-spacing: 1.05;
+.container-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    font-weight: 300;
 }
-   /*Call to Action Button*/
+
 .btn {
     background: linear-gradient(45deg, #ff6b6b, #ee5a24);
     color: white;
     padding: 15px 30px;
     border: none;
     border-radius: 50px;
-    font-size: 16px;
+    font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -104,13 +93,24 @@ nav a:hover{
     background: linear-gradient(45deg, #ff5252, #d63031);
 }
 
+header img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: fadeInRight 1s ease-out 0.3s both;
+}
 
-.about-section{
-    flex: 1;
-    padding: 20px;
-    background:#fafafa;
-    border-radius:10px;
-    border: 1px solid #e2e2e2;
+/* Scroll Indicator */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #ffd700);
+    z-index: 1000;
+    transition: width 0.3s ease;
 }
 
 /* Main Content */
@@ -143,8 +143,7 @@ main {
 }
 
 .researchqsection h2 {
-    color: #333;
-    text-shadow: 5px 5px 4px rgba(0,0,0,0.1);
+    color: #2a5298;
     font-size: 2.2rem;
     margin-bottom: 20px;
     position: relative;
@@ -157,18 +156,19 @@ main {
     left: 0;
     width: 60px;
     height: 4px;
+    background: linear-gradient(45deg, #ff6b6b, #ffd700);
     border-radius: 2px;
 }
 
 .researchqsection p {
-    font-size: 16px;
+    font-size: 1.1rem;
     line-height: 1.7;
-    color: #333;
+    color: #555;
     font-style: italic;
-    background: #f0f0f0;
+    background: #f8f9ff;
     padding: 25px;
     border-radius: 15px;
-    border-left: 5px solid #310101;
+    border-left: 5px solid #2a5298;
 }
 
 /* Typing Animation */
@@ -177,7 +177,7 @@ main {
 }
 
 .typing h2 {
-    color: #660808;
+    color: #2a5298;
     font-size: 2.2rem;
     overflow: hidden;
     border-right: 3px solid #ff6b6b;
@@ -192,13 +192,13 @@ main {
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: #660808 }
+    50% { border-color: #ff6b6b }
 }
 
 .matters-content p {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #666;
     text-align: justify;
 }
 
@@ -214,8 +214,7 @@ main {
 }
 
 .overview-title {
-    color: #333;
-    text-shadow: 5px 5px 4px rgba(0,0,0,0.1);
+    color: #2a5298;
     font-size: 1.8rem;
     margin-bottom: 30px;
     text-align: center;
@@ -230,7 +229,7 @@ main {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background: #333;
+    background: linear-gradient(45deg, #ff6b6b, #ffd700);
     border-radius: 2px;
 }
 
@@ -271,10 +270,10 @@ main {
     box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
 }
 
-.overview-box:nth-child(1) { background: linear-gradient(135deg, #f08585 0%, #851020 100%); }
-.overview-box:nth-child(2) { background: linear-gradient(135deg, #f08585 0%, #851020 100%); }
-.overview-box:nth-child(3) { background: linear-gradient(135deg, #f08585 0%, #851020 100%); }
-.overview-box:nth-child(4) { background: linear-gradient(135deg, #f08585 0%, #851020 100%); }
+.overview-box:nth-child(1) { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.overview-box:nth-child(2) { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.overview-box:nth-child(3) { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.overview-box:nth-child(4) { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
 
 .icon-placeholder {
     width: 50px;
@@ -372,60 +371,11 @@ main {
     }
 }
 
-/* Footer Section */
-footer{
-    background: #f8f8f8;
-    color:#222;
-    border-top: 1px solid #e6e6e6;
-    padding: 18px 20px;
-    font-size: 14px;
-}
-.footer-inner{
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-.footer-text p{
-    margin: 2px 0;
-    line-height: 1.25;
-}
-.footer-text .byline strong{
-    font-weight: 600;
-}
-.footer-utility{
-    max-width: 1100px;
-    margin: 10px auto 0;
-    text-align: right;
-}
-.back-to-top{
-    color: #0b5fff;
-    text-decoration: none;
-    font-size: 13px;
-}
-.back-to-top:hover, .back-to-top:focus{
-    text-decoration: underline;
-}
-/* Responsive design for the footer*/
-@media (max-width: 520px) {
-      .footer-inner {
-        flex-direction: row;
-        gap: 12px;
-      }
-      .footer-utility {
-        text-align: center;
-        margin-top: 12px;
-      }
-    }
-
-.scroll-indicator{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 4px;
-    background: linear-gradient(45deg, #667eea, #764ba2);
-    z-index: 1000;
-    transition: width 0.3s ease;
-    }
+/* Scroll Progress Script */
+/* Add this to your JavaScript file */
+/*
+window.addEventListener('scroll', () => {
+    const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('scrollIndicator').style.width = scrolled + '%';
+});
+*/

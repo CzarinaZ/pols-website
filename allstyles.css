@@ -1,17 +1,18 @@
 /*Header Section*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 *{
     margin: 0;
     padding: 0;
-    font-family: "Monsterat", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .site-header{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 200px;
     background:white;
-    border-bottom: 1px solid #e6e6e6;
+    padding: 20px 200px;
+    border-bottom: 1.5px solid #e6e6e6;
 }
 
 /*left side of header*/
