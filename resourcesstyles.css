@@ -13,7 +13,11 @@
     align-items: center;
     justify-content: center;
     min-height: 110vh;
-    background: linear-gradient(#8eb9e3, #ff978f);
+    
+    background: url("assets/redbackground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .resources-title h1{
     text-align: center;
