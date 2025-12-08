@@ -1,3 +1,5 @@
+
+/*Resources Card Slider (Reflections & Resources Page)*/
 const swiper = new Swiper('.wrapper', {
   loop: true,
   spaceBetween: 30,
@@ -36,6 +38,7 @@ const swiper = new Swiper('.wrapper', {
     }
 });
 
+/*Structural Barriers Cards (Barriers Page)*/
 function flipCard(card) {
             card.classList.toggle('flipped');
         }

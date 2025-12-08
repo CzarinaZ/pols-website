@@ -38,8 +38,10 @@
         
         <main>
                 <div class="scroll-indicator" id="scrollIndicator"></div>
-                <!--left side-->
+                
+                <!--About The Project-->
                 <div class="content-wrapper">
+                    <!--LEFT: Research Questions and Why it matters?-->
                     <div class="about-section">
                         <div class="about-container">
                             <!--Research Question-->
@@ -93,7 +95,30 @@
                     </div>
                 </div>
 
-                
+                <!--Personal Story Section-->
+                <div class="about-us">
+                    <div class="about-container">
+                        <div class="row">
+                            
+                            <div class="flex">
+                                <img src="assets/filrallies.jpg" alt="Personal Photo">
+                            </div>
+
+                            <div class="flex">
+                                <h2>About Me</h2>
+                                <h3>Hi! My name is Czarina!</h3>
+                                <p>
+                                    Growing up in a Filipino household, I saw firsthand how difficult it was for adults in my family to participate in American politics. 
+                                    My parents worked long hours and often felt confused by voting forms and election information, especially because English is not their first language. 
+                                    Political conversations were rare in our home because there was fear of saying the wrong thing or disrespecting the authority. In contrast, I learned about the U.S. government in school but struggled to translate that knowledge into action at home. 
+                                    Watching this disconnect made me realize that political participation is not just about wanting to vote. It's about access, confidence, education, and support. This personal experience inspired me to explore Filipino families and navigate cultural expectations while trying to engage in American democracy.
+                                </p>
+                                <a href="resources.html" class="aboutbtn">How Did It Evolved?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Script for the Page-->
                 <script>
                             window.addEventListener('scroll', () => {
                             const scrollTop = document.documentElement.scrollTop;
@@ -102,10 +127,8 @@
                             document.getElementById('scrollIndicator').style.width = scrollPercent + '%';
                         });
                 </script>
-            
-            <!--Footer-->
         </main>
-
+        <!--Footer Section-->
         <footer>
                 <div class="footer-inner">
                     <div class="footer-text">
