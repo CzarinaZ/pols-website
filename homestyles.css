@@ -270,11 +270,30 @@ main {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
 }
-
-.overview-box:nth-child(1) { background: linear-gradient(135deg, #f08585 0%, #851020 100%); }
-.overview-box:nth-child(2) { background: linear-gradient(135deg, #f08585 0%, #851020 100%); }
-.overview-box:nth-child(3) { background: linear-gradient(135deg, #f08585 0%, #851020 100%); }
-.overview-box:nth-child(4) { background: linear-gradient(135deg, #f08585 0%, #851020 100%); }
+.overview-box:nth-child(1) { 
+    background-image: url("assets/philippine.jpg");
+    background-size: cover;  /* Makes image cover the entire box */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents image from repeating */
+}
+.overview-box:nth-child(2) { 
+    background-image: url("assets/barriers.jpg");
+    background-size: cover;  /* Makes image cover the entire box */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents image from repeating */
+}
+.overview-box:nth-child(3) { 
+    background-image: url("assets/interviewicon.jpg");
+    background-size: cover;  /* Makes image cover the entire box */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents image from repeating */
+}
+.overview-box:nth-child(4) { 
+    background-image: url("assets/community.jpg");
+    background-size: cover;  /* Makes image cover the entire box */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents image from repeating */
+}
 
 .icon-placeholder {
     width: 50px;
@@ -290,6 +309,7 @@ main {
 
 .icon-placeholder::before {
     content: '→';
+    color: #333;
     font-size: 24px;
     font-weight: bold;
 }
@@ -298,6 +318,8 @@ main {
     font-size: 1.1rem;
     font-weight: 600;
     line-height: 1.3;
+    color: #f0f0f0;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.9);
 }
 
 /* Animations */

@@ -85,6 +85,9 @@
 .culturaltext{
     text-align: center;
 }
+.culturaltext p{
+    padding-top: 10px;
+}
 .cultural-container{
     position:relative;
     display: flex;
@@ -158,7 +161,11 @@
     color: #333;
 }
 
-
+.hoverview{
+    text-align:center;
+    font-size: 14px;
+    padding-top:10px;
+}
 /*structural barriers*/
 .structural-section{
     min-height: 80vh;
@@ -270,3 +277,14 @@
     font-size: 0.8rem;
     opacity: 0.8;
 }
+
+.scroll-indicator{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    z-index: 1000;
+    transition: width 0.3s ease;
+    }

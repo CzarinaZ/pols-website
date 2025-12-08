@@ -14,6 +14,7 @@
     </head>
 
     <body>
+        <!--Header-->
         <header class="site-header">
             <div class="header-left">
                 <img src="assets/phsunlogo.jpg" alt="Philippine sun" class="header-logo">
@@ -29,6 +30,9 @@
         </header>
 
         <main>
+            <div class="scroll-indicator" id="scrollIndicator"></div>
+
+            <!--Introduction to the page-->
             <div class="introtext">
                 <h1 class="introtitle">Cultural Values & Structural Challenges</h1>
                 <p>
@@ -41,12 +45,15 @@
                     <span></span>
                 </div>
             </div>
-            <!--Cultural Section-->
+           
+
             <section class="shared-background">
+                 <!--Cultural Section-->
                 <div class="cultural-section" id="targetSection">
                     <div class="culturaltext">
                         <h2 class="culturalsectiontitle">Cultural Values</h2>
                         <p>Filipino words and short descriptions/connections below</p>
+                        <p class="hoverview">(Hover to View)</p>
                     </div>
                     <div class="cultural-container">
                         <div class="cultural-card">
@@ -82,6 +89,7 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
 
                 <!--Structural Section-->
@@ -202,20 +210,31 @@
                 </div>
             </section>
 
-            <!--Footer-->
-            <footer>
-                <div class="footer-inner">
-                    <div class="footer-text">
-                        <p class="copyright">© 2025 Finding Political Voice Project</p>
-                        <p class="byline">Created by <strong>Czarina Bareng</strong> | Filipino Immigrant Political Engagement Study</p>
-                        <p class="course">For <em>POLS&202: American Government</em>, <em>Professor Olivia Atkinson</em></p>
-                    </div>
-                </div>
+            <!--Script for this page-->
+            <script>
+                window.addEventListener('scroll', () => {
+                const scrollTop = document.documentElement.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollPercent = (scrollTop / scrollHeight) * 100;
+                document.getElementById('scrollIndicator').style.width = scrollPercent + '%';
+            });
+            </script>
 
-                <div class="footer-utility">
-                    <a href="#top" class="back-to-top">Back to top</a>
-                </div>
-            </footer>
+            
         </main>
+        <!--Footer-->
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-text">
+                    <p class="copyright">© 2025 Finding Political Voice Project</p>
+                    <p class="byline">Created by <strong>Czarina Bareng</strong> | Filipino Immigrant Political Engagement Study</p>
+                    <p class="course">For <em>POLS&202: American Government</em>, <em>Professor Olivia Atkinson</em></p>
+                </div>
+            </div>
+
+            <div class="footer-utility">
+                <a href="#top" class="back-to-top">Back to top</a>
+            </div>
+        </footer>
     </body>
 </html>
