@@ -272,27 +272,27 @@ main {
 }
 .overview-box:nth-child(1) { 
     background-image: url("assets/philippine.jpg");
-    background-size: cover;  /* Makes image cover the entire box */
-    background-position: center;  /* Centers the image */
-    background-repeat: no-repeat;  /* Prevents image from repeating */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .overview-box:nth-child(2) { 
     background-image: url("assets/barriers.jpg");
-    background-size: cover;  /* Makes image cover the entire box */
-    background-position: center;  /* Centers the image */
-    background-repeat: no-repeat;  /* Prevents image from repeating */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .overview-box:nth-child(3) { 
     background-image: url("assets/interviewicon.jpg");
-    background-size: cover;  /* Makes image cover the entire box */
-    background-position: center;  /* Centers the image */
-    background-repeat: no-repeat;  /* Prevents image from repeating */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .overview-box:nth-child(4) { 
     background-image: url("assets/community.jpg");
-    background-size: cover;  /* Makes image cover the entire box */
-    background-position: center;  /* Centers the image */
-    background-repeat: no-repeat;  /* Prevents image from repeating */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .icon-placeholder {
@@ -345,57 +345,7 @@ main {
     }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header .container {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 40px;
-    }
-    
-    .container-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .content-wrapper {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .overview-section {
-        position: static;
-    }
-    
-    .about-section {
-        padding: 30px 20px;
-    }
-    
-    .researchqsection h2,
-    .typing h2 {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .container-content h1 {
-        font-size: 2rem;
-    }
-    
-    .container-content p {
-        font-size: 1.1rem;
-    }
-    
-    .about-section {
-        padding: 20px;
-    }
-    
-    .overview-section {
-        padding: 20px;
-    }
-}
-
 /*Personal Story Section*/
-
 .about-us{
     padding: 80px 0px;
 }
@@ -403,16 +353,17 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 60px;
-
 }
 .row{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
 }
 .flex{
-    flex: 0 0 50%;
-    max-width: 40%;
-    padding: 20px 60px;
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
 }
 .about-us h2{
     font-size: 45px;
@@ -434,8 +385,7 @@ main {
     display: block;
     max-width: 100%;
     height: auto;
-    margin: 100px auto;
-    
+    border-radius: 8px;
 }
 
 .aboutbtn{
@@ -449,11 +399,12 @@ main {
     text-transform: uppercase;
     border-radius: 5px;
     transition: all 0.4s ease;
-
+    display: inline-block;
 }
 .aboutbtn:hover{
     transform:translateY(-3px);
 }
+
 /* Footer Section */
 footer{
     background: #f8f8f8;
@@ -489,17 +440,6 @@ footer{
 .back-to-top:hover, .back-to-top:focus{
     text-decoration: underline;
 }
-/* Responsive design for the footer*/
-@media (max-width: 520px) {
-      .footer-inner {
-        flex-direction: row;
-        gap: 12px;
-      }
-      .footer-utility {
-        text-align: center;
-        margin-top: 12px;
-      }
-    }
 
 /*Scroll Indicator*/
 .scroll-indicator{
@@ -511,4 +451,358 @@ footer{
     background: linear-gradient(45deg, #667eea, #764ba2);
     z-index: 1000;
     transition: width 0.3s ease;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - TABLET & MOBILE
+   ============================================ */
+
+/* Tablet Styles (768px - 1024px) */
+@media (max-width: 1024px) {
+    nav {
+        padding: 20px 60px;
     }
+    
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 0 30px;
+    }
+    
+    .overview-section {
+        position: static;
+    }
+}
+
+/* Tablet Styles (768px and below) */
+@media (max-width: 768px) {
+    /* Navigation */
+    nav {
+        padding: 20px 30px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    nav a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    
+    /* Header Section */
+    .container-content h1 {
+        font-size: 3rem;
+        white-space: normal;
+    }
+    
+    .container-content p {
+        font-size: 18px;
+        white-space: normal;
+        padding: 0 20px;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    
+    /* Main Content */
+    main {
+        padding: 50px 0;
+    }
+    
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+    }
+    
+    /* About Section */
+    .about-section {
+        padding: 30px 20px;
+    }
+    
+    .researchqsection h2,
+    .typing h2 {
+        font-size: 1.8rem;
+    }
+    
+    .researchqsection p {
+        font-size: 15px;
+        padding: 20px;
+    }
+    
+    .matters-content p {
+        font-size: 15px;
+        text-align: left;
+    }
+    
+    /* Overview Section */
+    .overview-section {
+        position: static;
+        top: auto;
+        padding: 25px;
+    }
+    
+    .overview-title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+    
+    .overview-container {
+        gap: 15px;
+    }
+    
+    .overview-box {
+        padding: 20px;
+    }
+    
+    /* Personal Story Section */
+    .about-us {
+        padding: 60px 0px;
+    }
+    
+    .about-container {
+        padding: 0 30px;
+    }
+    
+    .row {
+        gap: 30px;
+    }
+    
+    .flex {
+        min-width: 100%;
+        padding: 10px;
+    }
+    
+    .about-us h2 {
+        font-size: 36px;
+    }
+    
+    .about-us h3 {
+        font-size: 20px;
+    }
+    
+    .about-us p {
+        font-size: 15px;
+    }
+    
+    .aboutbtn {
+        padding: 12px 24px;
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Footer */
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .footer-utility {
+        text-align: center;
+        margin-top: 12px;
+    }
+}
+
+/* Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+    /* Navigation */
+    nav {
+        padding: 15px 20px;
+    }
+    
+    nav ul {
+        gap: 8px;
+    }
+    
+    nav a {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+    
+    /* Header Section */
+    .container-content h1 {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+    
+    .container-content p {
+        font-size: 14px;
+        margin-bottom: 15px;
+        padding: 0 15px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    /* Main Content */
+    main {
+        padding: 40px 0;
+    }
+    
+    .content-wrapper {
+        padding: 0 15px;
+        gap: 30px;
+    }
+    
+    /* About Section */
+    .about-section {
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+    
+    .researchqsection {
+        margin-bottom: 30px;
+    }
+    
+    .researchqsection h2,
+    .typing h2 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    
+    .typing h2 {
+        white-space: normal;
+        border-right: none;
+        animation: none;
+    }
+    
+    .researchqsection p {
+        font-size: 14px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    
+    .matters-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    /* Overview Section */
+    .overview-section {
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+    
+    .overview-title {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    
+    .overview-container {
+        gap: 12px;
+    }
+    
+    .overview-box {
+        padding: 18px;
+    }
+    
+    .overview-box-title {
+        font-size: 0.95rem;
+    }
+    
+    .icon-placeholder {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    
+    .icon-placeholder::before {
+        font-size: 20px;
+    }
+    
+    /* Personal Story Section */
+    .about-us {
+        padding: 40px 0px;
+    }
+    
+    .about-container {
+        padding: 0 20px;
+    }
+    
+    .row {
+        gap: 20px;
+    }
+    
+    .flex {
+        padding: 5px;
+    }
+    
+    .about-us h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .about-us h3 {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    
+    .about-us p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    
+    .aboutbtn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .about-us img {
+        border-radius: 6px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 15px;
+        font-size: 13px;
+    }
+    
+    .footer-text p {
+        font-size: 12px;
+    }
+    
+    .back-to-top {
+        font-size: 12px;
+    }
+    
+    /* Scroll Indicator */
+    .scroll-indicator {
+        height: 3px;
+    }
+}
+
+/* Extra Small Mobile (360px and below) */
+@media (max-width: 360px) {
+    .container-content h1 {
+        font-size: 1.6rem;
+    }
+    
+    .container-content p {
+        font-size: 12px;
+    }
+    
+    .about-us h2 {
+        font-size: 24px;
+    }
+    
+    .researchqsection h2,
+    .typing h2 {
+        font-size: 1.2rem;
+    }
+    
+    .overview-title {
+        font-size: 1.1rem;
+    }
+}

@@ -7,17 +7,323 @@
     font-family: 'Inter', sans-serif;
 }
 
+main{
+    background: white;
+}
+/*Reflection */
+.reflection-section {
+            background: white;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .reflection-section::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(102, 8, 8, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .timeline-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #270202;
+            position: relative;
+            font-family: 'Inter', sans-serif;
+        }
+        
+
+        
+        /* Timeline Animation Container */
+        .timeline-animation {
+            position: relative;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        
+        /* Year Counter - Fast forward through years */
+        .year-counter {
+            position: absolute;
+            font-size: 6rem;
+            font-weight: 700;
+            color: rgba(102, 8, 8, 0.15);
+            font-family: 'Inter', sans-serif;
+            animation: countYears 3s ease-in-out forwards;
+        }
+        
+        @keyframes countYears {
+            0% { 
+                content: '2025';
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            10% { 
+                opacity: 1;
+                transform: scale(1);
+            }
+            20% { 
+                opacity: 0;
+                transform: scale(1.5);
+            }
+            30% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            40% {
+                opacity: 0;
+                transform: scale(1.5);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            60% {
+                opacity: 0;
+                transform: scale(1.5);
+            }
+            70% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            80% {
+                opacity: 0;
+                transform: scale(1.5);
+            }
+            100% { 
+                opacity: 0;
+                transform: scale(2);
+            }
+        }
+        
+        /* Animated line */
+        .timeline-line {
+            position: absolute;
+            width: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #660808, #ff6b6b);
+            animation: expandLine 3s ease-in-out forwards;
+        }
+        
+        @keyframes expandLine {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 80%;
+            }
+        }
+        
+        /* Fast forward indicator */
+        .fast-forward {
+            position: absolute;
+            font-size: 3rem;
+            color: #660808;
+            animation: fastForward 3s ease-in-out forwards;
+        }
+        
+        @keyframes fastForward {
+            0%, 90% {
+                opacity: 0.3;
+                transform: translateX(-100px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(200px);
+            }
+        }
+        
+        /* Today's content box */
+        .today-content {
+            max-width: 1200px;
+            margin: 0px auto 0;
+            background: linear-gradient(135deg, #660808, #8b0a0a);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(102, 8, 8, 0.3);
+            color: white;
+            opacity: 0;
+            transform: translateY(50px) scale(0.9);
+            animation: revealToday 1s ease-out 3.2s forwards;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        @keyframes revealToday {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        .today-badge {
+            display: inline-block;
+            background: #fff5c9;
+            color: #660808;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite 4.5s;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 245, 201, 0.7);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(255, 245, 201, 0);
+            }
+        }
+        
+        .today-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #fff5c9;
+        }
+        
+        .today-description {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        /* Year transitions */
+        .year-counter::before {
+            content: '2020';
+            animation: changeYear 3s steps(1) forwards;
+        }
+        
+        @keyframes changeYear {
+            0%, 10% { content: '2021'; }
+            10.1%, 30% { content: '2022'; }
+            30.1%, 50% { content: '2023'; }
+            50.1%, 70% { content: '2024'; }
+            70.1%, 100% { content: '2025'; }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .reflection-section {
+                padding: 60px 15px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .intro-text {
+                padding: 25px 20px;
+                margin: 30px auto 40px;
+            }
+            
+            .intro-text p {
+                font-size: 0.95rem;
+            }
+            
+            .timeline-animation {
+                height: 150px;
+                margin: 40px 0;
+            }
+            
+            .year-counter {
+                font-size: 4rem;
+            }
+            
+            .fast-forward {
+                font-size: 2rem;
+            }
+            
+            .today-content {
+                padding: 30px 25px;
+            }
+            
+            .today-title {
+                font-size: 1.6rem;
+            }
+            
+            .today-description {
+                font-size: 0.95rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .reflection-section {
+                padding: 40px 10px;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .intro-text {
+                padding: 20px 15px;
+                margin: 20px auto 30px;
+            }
+            
+            .intro-text p {
+                font-size: 0.9rem;
+            }
+            
+            .timeline-animation {
+                height: 120px;
+                margin: 30px 0;
+            }
+            
+            .year-counter {
+                font-size: 3rem;
+            }
+            
+            .fast-forward {
+                font-size: 1.5rem;
+            }
+            
+            .today-content {
+                padding: 25px 20px;
+            }
+            
+            .today-badge {
+                font-size: 0.8rem;
+                padding: 6px 16px;
+            }
+            
+            .today-title {
+                font-size: 1.4rem;
+                margin-bottom: 12px;
+            }
+            
+            .today-description {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+        }
+
+
+
+/*Resource  Section*/
 .resourcessection{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 110vh;
-    
-    background: url("assets/redbackground.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    min-height: 100vh;
 }
 .resources-title h1{
     text-align: center;
@@ -25,7 +331,7 @@
     width: 100%;
     margin: 0 auto 20px auto;
     padding-bottom: 5px;
-    color: #fff5c9;
+    color: #333;
     text-shadow: 5px 5px 4px rgba(0,0,0,0.2);
 }
 .wrapper{
