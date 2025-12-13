@@ -331,7 +331,7 @@ main{
     width: 100%;
     margin: 0 auto 20px auto;
     padding-bottom: 5px;
-    color: #333;
+    color: #270202;
     text-shadow: 5px 5px 4px rgba(0,0,0,0.2);
 }
 .wrapper{
@@ -363,6 +363,7 @@ main{
     aspect-ratio: 16/9;
 }
 
+
 .card .card-image .card-tag{
     position: absolute;
     left: 25px;
@@ -390,7 +391,7 @@ main{
     margin-bottom: 15px;
 }
 .card .card-content .card-text{
-    color: #747474;
+    color: #6b6a6a;
     font-size: .95rem;
     font-weight: 700;
     line-height: 1.6;
